@@ -1,4 +1,9 @@
 .navigation {
     padding: 1rem;
     height: 10vh;
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+.logo {
+    height: 40px;
 }
