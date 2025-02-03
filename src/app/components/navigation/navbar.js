@@ -21,12 +21,10 @@ const Navbar = () => {
                 <Link className="link" href="/">
                     Other Opportunities
                 </Link>
-                <Link className="link" href="/">
-                    Other Opportunities
-                </Link>
+            
             </div>
 
-            <button className="navBtn">Click Me</button>
+            <button className="navBtn">Get Access Now!</button>
         </nav>
 
     )
