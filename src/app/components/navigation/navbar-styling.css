@@ -2,8 +2,21 @@
     padding: 1rem;
     height: 10vh;
     font-family: 'Instrument Sans', sans-serif;
+    display: inline-flex;
 }
 
 .logo {
     height: 40px;
+    justify-content: left;
+}
+
+.menu-items {
+    justify-content: center;
+    align-items: center;
+}
+
+
+.link {
+    padding: 0.5rem;
+    text-decoration: none;
 }
