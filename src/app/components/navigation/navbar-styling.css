@@ -15,7 +15,7 @@
 
 .menu-items {
     display: flex;
-    gap: 6rem;
+    gap: 3rem;
     font-family: Inter;
     font-weight: 500;
     align-items: center;

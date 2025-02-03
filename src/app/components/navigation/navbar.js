@@ -21,7 +21,7 @@ const Navbar = () => {
                 <Link className="link" href="/">
                     Other Opportunities
                 </Link>
-            
+            <button className="turqBtn">Access it Now!</button>
             </div>
         </nav>
 
