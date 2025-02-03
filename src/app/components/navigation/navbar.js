@@ -15,16 +15,14 @@ const Navbar = () => {
                     Submit Resources
                 </Link>
 
-                {/* <Link className="link" href="/">
+                <Link className="link" href="/">
                     Blog
-                </Link> */}
+                </Link>
                 <Link className="link" href="/">
                     Other Opportunities
                 </Link>
             
             </div>
-                    {/* <h1>Test</h1> */}
-            <button className="turqBtn">Get Access Now!</button>
         </nav>
 
     )

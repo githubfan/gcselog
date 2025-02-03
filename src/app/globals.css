@@ -32,16 +32,18 @@ body {
   font-family: 'Instrument Sans', sans-serif;
 }
 
+
+
 .turqBtn {
   background-color: #266F77;
   color: white;
-  padding: 1.3em 2em;
   border: none;
   border-radius: 10px;
   font-family: 'Instrument Sans', sans-serif;
   font-weight: 600;
   font-size: 15px;
   margin: 0;
+  padding: 1.3em 2em;
 }
 
 
@@ -64,3 +66,4 @@ body {
   justify-content: center;
   align-items: center;
 }
+

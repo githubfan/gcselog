@@ -15,9 +15,10 @@
 
 .menu-items {
     display: flex;
-    gap: 50px;
+    gap: 6rem;
     font-family: Inter;
     font-weight: 500;
+    align-items: center;
     color: black;
 }
 
@@ -31,4 +32,3 @@
 .link:hover {
     text-decoration: underline;
 }
-
