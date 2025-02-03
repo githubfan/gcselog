@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
 body {
   background-color: #FDFBD4;
 }
 .header-title {
+  padding: 1rem;
   color: #96A667;
   text-align: center;
   font-size: 94px;
@@ -12,7 +19,7 @@ body {
 
 .header-desc {
   text-align: center;
-  padding: 0.7em 10em;
+  padding: 1rem 5rem;
   line-height: 50px;
   font-size: 18px;
   font-weight: 500;
@@ -20,6 +27,6 @@ body {
 }
 
 .homepage-header {
-  height: 100vh;
+  height: 90vh;
   font-family: 'Instrument Sans', sans-serif;
 }
