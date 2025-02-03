@@ -4,9 +4,9 @@ import Image from "next/image";
 const Navbar = () => {
     return (
         <nav className="navigation">
-            <img className="logo" src="GCSE Log Logo.png" alt="GCSE Log Logo" />
+            {/* <img className="logo" src="GCSE Log Logo.png" alt="GCSE Log Logo" /> */}
+            <h1>GCSE Log</h1>
             <div className="menu-items">
-
                 <Link className="link" href="/">
                     Subjects
                 </Link>
@@ -18,11 +18,15 @@ const Navbar = () => {
                 <Link className="link" href="/">
                     Blog
                 </Link>
-
+                <Link className="link" href="/">
+                    Other Opportunities
+                </Link>
                 <Link className="link" href="/">
                     Other Opportunities
                 </Link>
             </div>
+
+            <button className="navBtn">Click Me</button>
         </nav>
 
     )

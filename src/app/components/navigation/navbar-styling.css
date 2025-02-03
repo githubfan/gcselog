@@ -2,21 +2,36 @@
     padding: 1rem;
     height: 10vh;
     font-family: 'Instrument Sans', sans-serif;
-    display: inline-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
     height: 40px;
-    justify-content: left;
+    display: flex;
+    align-items: center;
 }
 
 .menu-items {
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    gap: 50px;
+    font-family: Inter;
+    font-weight: 500;
+    color: black;
 }
 
 
 .link {
+    color: black;
     padding: 0.5rem;
     text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.navBtn {
+    margin-left: 0;
 }
