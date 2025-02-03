@@ -8,23 +8,23 @@ const Navbar = () => {
             <h1>GCSE Log</h1>
             <div className="menu-items">
                 <Link className="link" href="/">
-                    Subjects
+                    Browse Subjects
                 </Link>
 
                 <Link className="link" href="/">
                     Submit Resources
                 </Link>
 
-                <Link className="link" href="/">
+                {/* <Link className="link" href="/">
                     Blog
-                </Link>
+                </Link> */}
                 <Link className="link" href="/">
                     Other Opportunities
                 </Link>
             
             </div>
-
-            <button className="navBtn">Get Access Now!</button>
+                    {/* <h1>Test</h1> */}
+            <button className="turqBtn">Get Access Now!</button>
         </nav>
 
     )

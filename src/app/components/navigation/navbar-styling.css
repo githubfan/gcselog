@@ -32,13 +32,3 @@
     text-decoration: underline;
 }
 
-.navBtn {
-    background-color: #266F77;
-    color: white;
-    padding: 1.3em 2em;
-    border: none;
-    border-radius: 10px;
-    font-family: 'Instrument Sans', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-}

@@ -9,6 +9,10 @@ export default function Home() {
     <header className="homepage-header">
         <h1 className="header-title">Built by Students, for Students</h1>
         <p className="header-desc">A collaborative resource created by students, for students, across the country. By promoting open-source materials, we aim to provide students from all backgrounds with the tools they need to achieve their highest potential.</p>
+        <div className="btnContainer">
+          <button className="turqBtn">Find out More</button>
+          <button className="purpBtn">Submit Resources</button>
+        </div>
       </header>
       </div>  
   );
