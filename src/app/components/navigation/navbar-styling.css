@@ -31,5 +31,6 @@
 
 .link:hover {
     font-size: larger;
+    color: #266F77;
     transition: 0.4s;
 }
