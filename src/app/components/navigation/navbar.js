@@ -4,8 +4,7 @@ import Image from "next/image";
 const Navbar = () => {
     return (
         <nav className="navigation">
-            {/* <img className="logo" src="GCSE Log Logo.png" alt="GCSE Log Logo" /> */}
-            <h1>GCSE Log</h1>
+            <img className="logo" src="GCSE Log Logo.png" alt="GCSE Log Logo" />
             <div className="menu-items">
                 <Link className="link" href="/">
                     Browse Subjects

@@ -67,3 +67,10 @@ body {
   align-items: center;
 }
 
+.section {
+  padding: 2em 0.7em;
+}
+
+.section-title {
+  font-family: 'Instrument Sans', sans-serif;
+}

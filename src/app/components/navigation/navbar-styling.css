@@ -30,5 +30,6 @@
 }
 
 .link:hover {
-    text-decoration: underline;
+    font-size: larger;
+    transition: 0.4s;
 }
