@@ -27,7 +27,7 @@ body {
 }
 
 .homepage-header {
-  height: 90vh;
+  min-height: 90vh;
   padding: 4rem 1rem;
   font-family: 'Instrument Sans', sans-serif;
 }
@@ -68,9 +68,10 @@ body {
 }
 
 .section {
+  min-height: 50vh;
   padding: 2em 1.3em;
   font-family: 'Inter', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .section p {

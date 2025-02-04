@@ -13,6 +13,7 @@ export default function Home() {
           <button className="purpBtn">Submit Resources</button>
         </div>
       </header>
+      
       <section className="section">
         <h2 className="section-title">So, what is GCSE Log?</h2>
         <p>GCSE Log is a project maintained by Abdul Rehman, and Josh Kalu. </p>
