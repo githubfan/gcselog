@@ -14,8 +14,10 @@ body {
   padding: 1rem;
   color: #495A19;
   text-align: center;
-  font-size: 6rem;
+  font-size: 80px;
 }
+
+
 
 .header-desc {
   text-align: center;
@@ -157,3 +159,14 @@ body {
   font-size: larger;
 }
 
+@media (max-width:500px) {
+  /* Header Resizing for Small Screens */
+  .header-title {
+    padding: 0;
+    font-size: 60px;
+  }
+
+  .header-desc {
+    padding: 0.5em;
+  }
+}
