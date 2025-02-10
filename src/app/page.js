@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./globals.css";
 import Navbar from "./components/navigation/navbar"
+import HomepageCard from "./components/cards/homepage-card";
 export default function Home() {
   return (
     <div className="main-div">
@@ -14,7 +15,7 @@ export default function Home() {
         </div>
       </header>
       
-      <section className="section">
+      <section className="section about-us">
         <h2 className="section-title">So, what is GCSE Log?</h2>
         <p>GCSE Log is a project maintained by Abdul Rehman, and Josh Kalu. </p>
         <p>It was started from our experience as GCSE students - desperately searching for resources to help us achieve the high marks we craved. However, we often found that many resources were locked behind paywalls, or difficult to find - as they were spread across the internet. As a result of this, we made our own resources - which ended in neither of us dropping below a Grade 8 at GCSE. </p>
@@ -22,6 +23,16 @@ export default function Home() {
         <p>By joining our mission, you have the chance to positively impact thousands of students across the country. The resources you've meticulously created can find a new purpose. Additionally, you can showcase this experience as volunteering for a non-profit organization on university or job applications. You will also gain access to a network of contributors, many of whom are high achieving students. It's a meaningful way to help others while advancing your own goals.</p>
         <p>So, get involved today - and change the academic landscape for students just like you!</p>
         <h3>- Josh & Abdul</h3>
+      </section>
+
+      <section className="section">
+        <h2 className="section-title subject-title">Subject Offerings</h2>
+        <div className="card-container">
+        <HomepageCard color="card bio-grad" subject="Biology" buttonLink="https://google.com" resources="534"/>
+        <HomepageCard color="card chem-grad" subject="Chemistry" resources="283"/>
+        <HomepageCard color="card phys-grad" subject="Physics" resources="125" />
+        <HomepageCard color="card maths-grad" subject="Maths" resources="56" />
+        </div>
       </section>
     </div>
   );

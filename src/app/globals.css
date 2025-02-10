@@ -44,6 +44,7 @@ body {
   font-size: 15px;
   margin: 0;
   padding: 1.3em 2em;
+  text-decoration: none;
 }
 
 
@@ -56,6 +57,12 @@ body {
   font-family: 'Instrument Sans', sans-serif;
   font-weight: 600;
   font-size: 15px;
+  text-decoration: none;
+}
+
+.subject-title {
+  text-align: center;
+  margin: 0px 0 50px 0px;
 }
 
 .btnContainer {
@@ -73,15 +80,28 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 18px;
 }
-
 .section p {
   padding: 1em 0em;
   line-height: 50px;
   font-weight: 500;
 }
 
+.section ul li {
+  padding: 1em 0em;
+  font-weight: 500;
+  line-height: 20px;
+  list-style-position: inside;
+}
+
+
 .section-title {
   font-family: 'Instrument Sans', sans-serif;
   font-size: 52px;
   color: #495A19;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
