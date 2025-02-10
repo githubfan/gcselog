@@ -53,12 +53,16 @@ export default function Home() {
             </Link>
         </section>
 
-        <section>
-          
+        <section className="section subSec">
+        <h2 className="section-title subject-title">Submit a Resource</h2>
+        <p>Do you have unused flashcards lying about, or know of a program you think will benefit the GCSE Log community? Submit it to be added to the collection! </p>
+        <br></br>
+        <Link href="" className="purpBtn subResBtn">Submit a Resource</Link>
         </section>
 
-        <footer>
-
+        <footer className="homepage-footer">
+        <img className="logo" src="GCSE Log Logo.png" alt="GCSE Log Logo" />
+        <p>Built with ❤️ by Josh Kalu & Abdul Rehman  </p>
         </footer>
     </div>
   );
