@@ -1,3 +1,5 @@
+/* Desktop Card Template */
+
 .subject-card {
     width: 30%;
     height: 50%;
@@ -11,7 +13,8 @@
     font-size: 48px;
     font-family: 'Instrument Sans', sans-serif;
 }
-
+ 
+/* Gradients */
 .bio-grad {
     background: linear-gradient(0deg, #91EC7A 0%, #F8E559 100%);
 }
@@ -26,4 +29,16 @@
 
 .maths-grad {
     background: linear-gradient(0deg, #7AE0EC 0%, #597EF8 100%);
+}
+
+/* Making Cards Responsive */
+
+@media (max-width: 1055px) {
+    .subject-card {
+        width: 100%;
+        text-align: center;
+        margin-top: 1.5rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
