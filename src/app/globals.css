@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+/* Basic Styling */
+
 * {
   padding: 0;
   margin: 0;
@@ -10,14 +12,16 @@ body {
   background-color: #FDFBD4;
 }
 
+
+
+/* Header Styling */
+
 .header-title {
   padding: 1rem;
   color: #495A19;
   text-align: center;
   font-size: 80px;
 }
-
-
 
 .header-desc {
   text-align: center;
@@ -36,47 +40,19 @@ body {
   font-family: 'Instrument Sans', sans-serif;
 }
 
+/* Header Resizing for Small Screens */
+@media (max-width:500px) {
+  .header-title {
+    padding: 0;
+    font-size: 60px;
+  }
 
-
-.turqBtn {
-  background-color: #266F77;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-family: 'Instrument Sans', sans-serif;
-  font-weight: 600;
-  font-size: 15px;
-  margin: 0;
-  padding: 1.3em 2em;
-  text-decoration: none;
+  .header-desc {
+    padding: 0.5em;
+  }
 }
 
-
-.purpBtn {
-  background-color: #562677;
-  color: white;
-  padding: 1.3em 2em;
-  border: none;
-  border-radius: 10px;
-  font-family: 'Instrument Sans', sans-serif;
-  font-weight: 600;
-  font-size: 15px;
-  text-decoration: none;
-}
-
-.subject-title {
-  text-align: center;
-  margin: 0px 0 50px 0px;
-}
-
-.btnContainer {
-  padding: 3rem 0.5rem;
-  text-align: center;
-  display: flex;
-  gap: 50px;
-  justify-content: center;
-  align-items: center;
-}
+/* Section Settings */
 
 .section {
   min-height: 50vh;
@@ -105,10 +81,32 @@ body {
   color: #495A19;
 }
 
-.subj-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+/* Buttons */
+
+.turqBtn {
+  background-color: #266F77;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 0;
+  padding: 1.3em 2em;
+  text-decoration: none;
+}
+
+
+.purpBtn {
+  background-color: #562677;
+  color: white;
+  padding: 1.3em 2em;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
 }
 
 .longBtn {
@@ -139,6 +137,28 @@ body {
   display: block;
 }
 
+.btnContainer {
+  padding: 3rem 0.5rem;
+  text-align: center;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Subject Section - Specific Settings */
+.subject-title {
+  text-align: center;
+  margin: 0px 0 50px 0px;
+}
+
+.subj-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .subSec {
   margin: 0;
 }
@@ -149,6 +169,7 @@ body {
   text-align: center;
 }
 
+/* Footer Styling */
 .homepage-footer {
   display: flex;
   justify-content: space-between;
@@ -159,18 +180,7 @@ body {
   font-size: larger;
 }
 
-@media (max-width:500px) {
-  /* Header Resizing for Small Screens */
-  .header-title {
-    padding: 0;
-    font-size: 60px;
-  }
-
-  .header-desc {
-    padding: 0.5em;
-  }
-}
-
+/* Responsive Footer */
 @media (max-width: 1055px) {
   footer {
     display: flex;
@@ -178,6 +188,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 30px;
+    text-align: center;
   }
 
 }
