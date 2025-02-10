@@ -24,3 +24,27 @@
 .resources-card>.resourceBtn {
     margin-left: 5%;
 }
+
+@media (max-width:1055px) {
+    .resources-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .resources-card>.title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .resources-card>p {
+        width: 100%;
+        
+    }
+
+    .resources-card>.resourceBtn {
+        margin-left: 0;
+    }
+}
