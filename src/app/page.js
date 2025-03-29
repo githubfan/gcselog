@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./globals.css";
 import Navbar from "./components/navigation/navbar"
+import Footer from "./components/footer/footer";
 import HomepageCard from "./components/cards/homepage-card";
 import ResourcesCard from "./components/cards/resources-card";
 
@@ -60,10 +61,7 @@ export default function Home() {
         <Link href="" className="purpBtn subResBtn">Submit a Resource</Link>
         </section>
 
-        <footer className="homepage-footer">
-        <img className="logo" src="GCSE Log Logo.png" alt="GCSE Log Logo" />
-        <p>Built with ❤️ by Josh Kalu & Abdul Rehman  </p>
-        </footer>
+        <Footer/>
     </div>
   );
 }

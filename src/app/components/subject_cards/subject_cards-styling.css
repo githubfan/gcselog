@@ -1,0 +1,47 @@
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3%;
+}
+.card {
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #000;
+    padding: 15px;
+    width: 30%;
+}
+
+.resourceType {
+    text-transform: uppercase;
+    margin: 15px 0 ;
+}
+
+.resourceTitle {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.tags {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    margin: 30px 0;
+}
+
+.tag {
+    border-radius: 10px;
+    border: 1px solid #000;
+    padding: 0.5rem;
+    font-size: 14px;
+}
+
+.accessButton {
+    text-decoration: none;
+    background-color: #000;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    padding: 0.7rem 1rem;
+}

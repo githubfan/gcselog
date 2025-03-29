@@ -1,0 +1,24 @@
+
+/* Footer Styling */
+.homepage-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 3em;
+    border-top: #000 solid;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 700;
+    font-size: larger;
+  }
+  
+  /* Responsive Footer */
+  @media (max-width: 1055px) {
+    footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      text-align: center;
+    }
+  
+  }
