@@ -1,6 +1,8 @@
 "use client"; 
 import { useEffect, useState } from "react";
 import "./subject_cards-styling.css";
+import Link from "next/link";
+
 
 const SubjectCards = () => {
   const [resources, setResources] = useState([]);
@@ -36,11 +38,12 @@ const SubjectCards = () => {
               <p className="tag subject">{resource["Subject"]}</p>
               <p className="tag examBoard">{resource["Exam Board"]}</p>
             </div>
-            <p className="author">{resource["Author"]}</p>
-            <a href={resource["Link"]} target="_blank" rel="noopener noreferrer" className="accessButton">
+            <div className="linkAuthorContainer">
+            <Link href={resource["Link"]} target="_blank" rel="noopener noreferrer" className="accessButton">
                 Get access now!            
-            </a>
-
+            </Link>
+            <p className="author">Uploaded by: {resource["Resource Author"]}</p>
+            </div>
           </div>
         ))
       )}
