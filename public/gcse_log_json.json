@@ -1,5 +1,6 @@
 [
   {
+    "Resource ID": "1",
     "Resource Type": "Flashcards",
     "Resource Title": "Cell Biology",
     "Study Level": "GCSE",
@@ -7,28 +8,42 @@
     "Exam Board": "AQA",
     "Link": "https://quizlet.com/gb/256416471/1-aqa-gcse-biology-cell-biology-flash-cards/",
     "Resource Author": "Abdul Rehman",
-    "Average Rating": 4.5
+    "Average Rating": 5
   },
 
   {
+    "Resource ID": "2",
     "Resource Type": "Flashcards",
-    "Resource Title": "Cell Biology",
+    "Resource Title": "Cell Structure",
     "Study Level": "GCSE",
     "Subject": "Biology",
     "Exam Board": "AQA",
     "Link": "https://quizlet.com/gb/256416471/1-aqa-gcse-biology-cell-biology-flash-cards/",
     "Resource Author": "Abdul Rehman",
-    "Average Rating": 4.5
+    "Average Rating": 5
   },
 
   {
+    "Resource ID": "3",
    "Resource Type": "Flashcards",
-    "Resource Title": "Cell Biology",
+    "Resource Title": "Cells Overview",
     "Study Level": "GCSE",
     "Subject": "Biology",
     "Exam Board": "AQA",
     "Link": "https://quizlet.com/gb/256416471/1-aqa-gcse-biology-cell-biology-flash-cards/",
     "Resource Author": "Abdul Rehman",
-    "Average Rating": 4.5
+    "Average Rating": 5
+  },
+
+  {
+    "Resource ID": "4",
+   "Resource Type": "Notes",
+    "Resource Title": "Processors",
+    "Study Level": "GCSE",
+    "Subject": "Computer Science",
+    "Exam Board": "OCR",
+    "Link": "https://quizlet.com/gb/256416471/1-aqa-gcse-biology-cell-biology-flash-cards/",
+    "Resource Author": "Abdul Rehman & Josh Kalu",
+    "Average Rating": 5
   }
 ]

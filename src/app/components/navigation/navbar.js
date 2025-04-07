@@ -16,7 +16,7 @@ const Navbar = () => {
             <img className="logo" src="GCSE Log Logo.png" alt="GCSE Log Logo" />
 
             <div className={`menu-items ${menuOpen ? "active" : ""}`}>
-                <Link className="link" href="/" onClick={() => setMenuOpen(false)}>
+                <Link className="link" href="/subjects" onClick={() => setMenuOpen(false)}>
                     Browse Subjects
                 </Link>
                 <Link className="link" href="/" onClick={() => setMenuOpen(false)}>
