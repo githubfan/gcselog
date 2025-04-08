@@ -4,7 +4,31 @@ import Script from 'next/script'
 
 export const metadata = {
   title: "GCSE Log",
-  description: "Revision - reimagined.",
+  description: "Built by students, for students. GCSE Log is a platform that collates resources from across the country, so you don't have to.",
+  icons: {
+    icon: "/icon.ico",
+  },
+  keywords: [
+    "GCSE",
+    "resources",
+    "education",
+    "students",
+    "learning",
+    "study",
+    "revision",
+    "collaboration",
+    "community",
+    "knowledge sharing",
+  ],
+  // what other metadata can i add
+  openGraph: {
+    title: "GCSE Log",
+    description: "Built by students, for students. GCSE Log is a platform that collates resources from across the country, so you don't have to.",
+    url: "https://gcselog.com",
+    siteName: "GCSE Log",
+    locale: "en_GB",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
