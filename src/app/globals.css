@@ -8,6 +8,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #FDFBD4;
 }
@@ -171,4 +175,10 @@ body {
   padding-left: 10%;
   padding-right: 10%;
   text-align: center;
+}
+
+.comingSoon {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
 }

@@ -23,10 +23,10 @@ const Navbar = () => {
                 <Link className="link" href="https://forms.gle/VMnnSfxGhduHmJaB9" onClick={() => setMenuOpen(false)} target="_blank" rel="noopener noreferrer">
                     Submit Resources
                 </Link>
-                <Link className="link" href="/" onClick={() => setMenuOpen(false)}>
+                <Link className="link" href="/blog" onClick={() => setMenuOpen(false)}>
                     Blog
                 </Link>
-                <Link className="link" href="/" onClick={() => setMenuOpen(false)}>
+                <Link className="link" href="/opportunities" onClick={() => setMenuOpen(false)}>
                     Other Opportunities
                 </Link>
                 <Link className="turqBtn" href="/subjects" onClick={() => setMenuOpen(false)}>Access it Now!</Link>
