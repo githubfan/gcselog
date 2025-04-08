@@ -1,4 +1,6 @@
 import "./globals.css";
+import Script from 'next/script'
+
 
 export const metadata = {
   title: "GCSE Log",
@@ -17,6 +19,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {children}
+        <Script src="https://scripts.simpleanalyticscdn.com/latest.js"  />
       </body>
     </html>
   );
