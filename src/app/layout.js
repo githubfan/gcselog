@@ -3,7 +3,7 @@ import Script from 'next/script'
 
 
 export const metadata = {
-  title: "GCSE Log",
+  title: "GCSE Log - Built by students, for Students",
   description: "Built by students, for students. GCSE Log is a platform that collates resources from across the country, so you don't have to.",
   icons: {
     icon: "/icon.ico",
@@ -20,9 +20,8 @@ export const metadata = {
     "community",
     "knowledge sharing",
   ],
-  // what other metadata can i add
   openGraph: {
-    title: "GCSE Log",
+    title: "GCSE Log - Built by students, for Students",
     description: "Built by students, for students. GCSE Log is a platform that collates resources from across the country, so you don't have to.",
     url: "https://gcselog.com",
     siteName: "GCSE Log",
