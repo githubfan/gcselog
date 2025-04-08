@@ -12,7 +12,7 @@ export default function Subjects(){
     return (
         <div>
         <Navbar />
-        <header className="homepage-header">
+        <header className="homepage-header subject-header">
             <h1 className="header-title">subject resources</h1>
             <p className="header-desc">resources from across the country, collated especially for you.</p>
         </header>

@@ -40,6 +40,10 @@ body {
   font-family: 'Instrument Sans', sans-serif;
 }
 
+.subject-header {
+  min-height: 50vh;
+}
+
 /* Header Resizing for Small Screens */
 @media (max-width:500px) {
   .header-title {
