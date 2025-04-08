@@ -12,14 +12,15 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="navigation">
+        <nav className="navigation"> 
+        <Link href="/" className="logo-link" onClick={() => setMenuOpen(false)}>
             <img className="logo" src="GCSE Log Logo.png" alt="GCSE Log Logo" />
-
+            </Link>
             <div className={`menu-items ${menuOpen ? "active" : ""}`}>
                 <Link className="link" href="/subjects" onClick={() => setMenuOpen(false)}>
                     Browse Subjects
                 </Link>
-                <Link className="link" href="/" onClick={() => setMenuOpen(false)}>
+                <Link className="link" href="https://forms.gle/VMnnSfxGhduHmJaB9" onClick={() => setMenuOpen(false)} target="_blank" rel="noopener noreferrer">
                     Submit Resources
                 </Link>
                 <Link className="link" href="/" onClick={() => setMenuOpen(false)}>
@@ -28,7 +29,7 @@ const Navbar = () => {
                 <Link className="link" href="/" onClick={() => setMenuOpen(false)}>
                     Other Opportunities
                 </Link>
-                <button className="turqBtn" onClick={() => setMenuOpen(false)}>Access it Now!</button>
+                <Link className="turqBtn" href="/subjects" onClick={() => setMenuOpen(false)}>Access it Now!</Link>
             </div>
 
             <div className={`hamburger ${menuOpen ? "active" : ""}`} onClick={toggleMenu}>
