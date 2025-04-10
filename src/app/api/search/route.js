@@ -12,6 +12,8 @@ export async function GET(req) {
             { level: { contains: query, mode: "insensitive" } },
             { type: { contains: query, mode: "insensitive" } },
             { examBoard: { contains: query, mode: "insensitive" } },
+            { description: { contains: query, mode: "insensitive" } },
+
           ],
         }
       : {};

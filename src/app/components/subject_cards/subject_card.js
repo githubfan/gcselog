@@ -63,7 +63,8 @@ const SubjectCards = () => {
           resource.subject.toLowerCase().includes(query.toLowerCase()) ||
           resource.examBoard.toLowerCase().includes(query.toLowerCase()) ||
           resource.level.toLowerCase().includes(query.toLowerCase()) ||
-          resource.type.toLowerCase().includes(query.toLowerCase())
+          resource.type.toLowerCase().includes(query.toLowerCase()) ||
+          resource.description.toLowerCase().includes(query.toLowerCase()) 
         );
         setResources(filtered);
       }
@@ -115,6 +116,7 @@ const SubjectCards = () => {
                 <p className="tag subject">{resource.subject}</p>
                 <p className="tag examBoard">{resource.examBoard}</p>
               </div>
+              <p className="resourceDescription">{resource.description}</p>
               <div className="linkAuthorContainer">
                 <Link href={resource.link} target="_blank" rel="noopener noreferrer" className="accessButton">
                   Get access now! <FontAwesomeIcon icon={faLocationArrow} className="faLocationArrow" />

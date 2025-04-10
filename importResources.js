@@ -25,6 +25,7 @@ async function importResources() {
           examBoard: item["Exam Board"],
           link: item["Link"],
           author: item["Resource Author"],
+          description: item["Resource Description"],
           // Skip averageRating on purpose, prevents database from overriding current rating 
         },
       });
@@ -40,6 +41,7 @@ async function importResources() {
           examBoard: item["Exam Board"],
           link: item["Link"],
           author: item["Resource Author"],
+          description: item["Resource Description"],
           averageRating: item["Average Rating"] || 0,
         },
       });

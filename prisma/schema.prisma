@@ -25,6 +25,7 @@ model Resource {
   link          String  
   author        String  
   averageRating Float?   @default(0) 
+  description   String? 
   ratings       Rating[]
 }
 
@@ -33,7 +34,6 @@ model Rating {
   userId     String
   resourceId String   // <--- MATCH THIS with Resource.resourceId
   rating     Float
-
   resource   Resource @relation(fields: [resourceId], references: [resourceId])
 
   @@unique([userId, resourceId])

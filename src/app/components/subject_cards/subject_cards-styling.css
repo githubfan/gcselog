@@ -131,9 +131,7 @@
 }
 
 .ratingContent {
-    height: 30%;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
 }
 
