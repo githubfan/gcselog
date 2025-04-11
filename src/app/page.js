@@ -1,12 +1,19 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./globals.css";
 import Navbar from "./components/navigation/navbar"
 import Footer from "./components/footer/footer";
+import SubjectCards from "./components/subject_cards/subject_card";
 import HomepageCard from "./components/cards/homepage-card";
 import ResourcesCard from "./components/cards/resources-card";
+import {useEffect, useState} from "react";
+
+
 
 export default function Home() {
+
+
   return (
     <div className="main-div">
       <Navbar />
@@ -31,13 +38,15 @@ export default function Home() {
       </section>
 
       <section className="section">
-        <h2 className="section-title subject-title">Featured Subjects</h2>
-        <div className="subj-card-container">
+        <h2 className="section-title subject-title">Featured Resources</h2>
+
+        {/* <div className="subj-card-container">
           <HomepageCard color="subject-card bio-grad" subject="Biology" buttonLink="/subjects" resources="534" />
           <HomepageCard color="subject-card chem-grad" subject="Chemistry" buttonLink="/subjects"  resources="283" />
           <HomepageCard color="subject-card phys-grad" subject="Physics" buttonLink="/subjects"  resources="125" />
           <HomepageCard color="subject-card maths-grad" subject="Maths" buttonLink="/subjects"  resources="56" />
-        </div>
+        </div> */}
+        
         <Link href="/subjects" className="longBtn">
             Access All Subjects Now!
             </Link>

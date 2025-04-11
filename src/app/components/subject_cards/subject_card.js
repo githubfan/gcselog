@@ -28,16 +28,6 @@ const SubjectCards = () => {
     setUserId(storedId);
   }, []);
 
-  // useEffect(() => {
-  //   const fetchResources = async () => {
-  //     const res = await fetch("/api/resources");
-  //     const data = await res.json();
-  //     setResources(data);
-  //   };
-
-  //   fetchResources();
-  // }, []);
-
   useEffect(() => {
     const fetchResources = async () => {
       setLoading(true);
