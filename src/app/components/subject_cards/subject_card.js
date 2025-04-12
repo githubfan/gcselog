@@ -43,18 +43,26 @@ const SubjectCards = ({query = ""}) => {
   // Filter resources on search query change
   useEffect(() => {
     const debounce = setTimeout(() => {
-      if (query.length === 0) {
-        setResources(allResources); // Show all resources if query is empty
-      } else {
+      
+        const normalizedQuery = query.trim().toLowerCase();
+
+    if (normalizedQuery.length === 0) {
+      setResources(allResources);
+    } else {
+      const terms = normalizedQuery.split(/\s+/);
         // Filter resources based on the query
-        const filtered = allResources.filter((resource) =>
-          resource.title.toLowerCase().includes(query.toLowerCase()) ||
-          resource.subject.toLowerCase().includes(query.toLowerCase()) ||
-          resource.examBoard.toLowerCase().includes(query.toLowerCase()) ||
-          resource.level.toLowerCase().includes(query.toLowerCase()) ||
-          resource.type.toLowerCase().includes(query.toLowerCase()) ||
-          resource.description.toLowerCase().includes(query.toLowerCase()) 
-        );
+        const filtered = allResources.filter((resource) => {
+          const combined = `
+        ${resource.title}
+        ${resource.subject}
+        ${resource.examBoard}
+        ${resource.level}
+        ${resource.type}
+        ${resource.description}
+      `.toLowerCase();
+
+      return terms.every(term => combined.includes(term));
+        });
         setResources(filtered);
       }
     }, 300); // debounce user input
