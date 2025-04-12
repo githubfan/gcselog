@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faLocationArrow } from "@fortawesome/free-solid-svg-icons"; // Importing FontAwesome icons
 // import the subject_cards-styling.css from the subject_cards folder
 
 

@@ -24,7 +24,7 @@ body {
   padding: 1rem;
   color: #495A19;
   text-align: center;
-  font-size: 80px;
+  font-size: 6em;
 }
 
 .header-desc {
@@ -37,11 +37,19 @@ body {
 }
 
 .homepage-header {
-  margin-top: 2%;
+  margin-top: 5vh;
   margin-bottom: 2%;
-  min-height: 70vh;
+  min-height: 65vh;
   padding: 4rem  1rem 0rem;
   font-family: 'Instrument Sans', sans-serif;
+}
+
+.turqText {
+  color: #266F77;
+}
+
+.purpText {
+  color: #562677;
 }
 
 .subject-header {
@@ -71,6 +79,7 @@ body {
 }
 .section p {
   padding: 1em 0em;
+  padding-right: 5em;
   line-height: 50px;
   font-weight: 500;
 }
@@ -181,4 +190,11 @@ body {
   text-align: center;
   font-size: 40px;
   font-weight: 700;
+} 
+
+/* Linkedin Links */
+a.linkedinLink {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
 }

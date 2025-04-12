@@ -8,6 +8,14 @@ import SubjectCards from "./components/subject_cards/subject_card";
 import HomepageCard from "./components/cards/homepage-card";
 import ResourcesCard from "./components/cards/resources-card";
 import {useEffect, useState} from "react";
+// import font awesome linkedin icon
+
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLink } from "@fortawesome/free-solid-svg-icons"; // Importing FontAwesome icons
 
 
 
@@ -18,18 +26,18 @@ export default function Home() {
     <div className="main-div">
       <Navbar />
       <header className="homepage-header">
-        <h1 className="header-title">Built by Students, for Students</h1>
+        <h1 className="header-title">Built by <span className="turqText">Students</span>, for <span className="purpText">Students</span></h1>
         <p className="header-desc">A collaborative resource created by students, for students, across the country. By promoting open-source materials, we aim to provide students from all backgrounds with the tools they need to achieve their highest potential.</p>
         <div className="btnContainer">
-          <Link className="turqBtn" href="#about-us">Find out More </Link>
-          <Link className="purpBtn" href="https://forms.gle/VMnnSfxGhduHmJaB9"  target="_blank" rel="noopener noreferrer">Submit Resources</Link>
+          <Link className="purpBtn" href="/subjects">Access Resources!</Link>
+          <Link className="turqBtn" href="https://forms.gle/VMnnSfxGhduHmJaB9"  target="_blank" rel="noopener noreferrer">Submit Resources</Link>
 
         </div>
       </header>
 
       <section className="section about-us">
         <h2 className="section-title" id="about-us">So, what is GCSE Log?</h2>
-        <p>GCSE Log is a project maintained by Abdul Rehman, and Josh Kalu. </p>
+        <p>GCSE Log is a project maintained by <Link href="https://www.linkedin.com/in/abdul-rehman-a4b927237" target="_blank" rel="noopener noreferrer" className="linkedinLink">Abdul Rehman <FontAwesomeIcon icon={faLink} /> </Link> and <Link href="https://www.linkedin.com/in/joshuakalu/" target="_blank" rel="noopener noreferrer" className="linkedinLink">Josh Kalu <FontAwesomeIcon icon={faLink} /> </Link>.</p>
         <p>It was started from our experience as GCSE students - desperately searching for resources to help us achieve the high marks we craved. However, we often found that many resources were locked behind paywalls, or difficult to find - as they were spread across the internet. As a result of this, we made our own resources - which ended in neither of us dropping below a Grade 8 at GCSE. </p>
         <p>As A-Level students, many of these resources sit idly on computers - unused, and unneeded. So in response, we’ve decided to create a platform to share these. The future students of the world will experience the same thing we went through - and we’d love to make it easier for them to access items to enrich their studying. </p>
         <p>By joining our mission, you have the chance to positively impact thousands of students across the country. The resources you've meticulously created can find a new purpose. Additionally, you can showcase this experience as volunteering for a non-profit organization on university or job applications. You will also gain access to a network of contributors, many of whom are high achieving students. It's a meaningful way to help others while advancing your own goals.</p>

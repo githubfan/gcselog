@@ -29,7 +29,7 @@ const Navbar = () => {
                 <Link className="link" href="/opportunities" onClick={() => setMenuOpen(false)}>
                     Other Opportunities
                 </Link>
-                <Link className="turqBtn" href="/subjects" onClick={() => setMenuOpen(false)}>Access it Now!</Link>
+                {/* <Link className="turqBtn" href="/subjects" onClick={() => setMenuOpen(false)}>Access it Now!</Link> */}
             </div>
 
             <div className={`hamburger ${menuOpen ? "active" : ""}`} onClick={toggleMenu}>
