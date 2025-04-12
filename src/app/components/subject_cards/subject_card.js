@@ -11,11 +11,10 @@ config.autoAddCss = false;
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationArrow } from "@fortawesome/free-solid-svg-icons"; // Importing FontAwesome icons
 
-const SubjectCards = () => {
+const SubjectCards = ({query = ""}) => {
   const [resources, setResources] = useState([]);
   const [userId, setUserId] = useState(null);
   const [allResources, setAllResources] = useState([]); // Store all resources
-  const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
 
 
@@ -86,7 +85,6 @@ const SubjectCards = () => {
   return ( // Displaying the resources in a card format
 
     <div className="subjectCardContainer">
-      <input type="text" placeholder="Search for resources..." className="searchBox" value={query} onChange={(e) => setQuery(e.target.value)} />
       <div className="cards-container">
 
       {loading ? (
