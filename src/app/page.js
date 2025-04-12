@@ -37,33 +37,31 @@ export default function Home() {
 
       <section className="section about-us">
         <h2 className="section-title" id="about-us">So, what is GCSE Log?</h2>
-        <p>GCSE Log is a project maintained by <Link href="https://www.linkedin.com/in/abdul-rehman-a4b927237" target="_blank" rel="noopener noreferrer" className="linkedinLink">Abdul Rehman <FontAwesomeIcon icon={faLink} /> </Link> and <Link href="https://www.linkedin.com/in/joshuakalu/" target="_blank" rel="noopener noreferrer" className="linkedinLink">Josh Kalu <FontAwesomeIcon icon={faLink} /> </Link>.</p>
-        <p>It was started from our experience as GCSE students - desperately searching for resources to help us achieve the high marks we craved. However, we often found that many resources were locked behind paywalls, or difficult to find - as they were spread across the internet. As a result of this, we made our own resources - which ended in neither of us dropping below a Grade 8 at GCSE. </p>
-        <p>As A-Level students, many of these resources sit idly on computers - unused, and unneeded. So in response, we’ve decided to create a platform to share these. The future students of the world will experience the same thing we went through - and we’d love to make it easier for them to access items to enrich their studying. </p>
-        <p>By joining our mission, you have the chance to positively impact thousands of students across the country. The resources you've meticulously created can find a new purpose. Additionally, you can showcase this experience as volunteering for a non-profit organization on university or job applications. You will also gain access to a network of contributors, many of whom are high achieving students. It's a meaningful way to help others while advancing your own goals.</p>
-        <p>So, get involved today - and change the academic landscape for students just like you!</p>
-        <h3>- Josh & Abdul</h3>
+        <p className="section-text">GCSE Log is a project maintained by <Link href="https://www.linkedin.com/in/abdul-rehman-a4b927237" target="_blank" rel="noopener noreferrer" className="linkedinLink">Abdul Rehman <FontAwesomeIcon icon={faLink} /> </Link> and <Link href="https://www.linkedin.com/in/joshuakalu/" target="_blank" rel="noopener noreferrer" className="linkedinLink">Josh Kalu <FontAwesomeIcon icon={faLink} /> </Link>.</p>
+        <p className="section-text">It was started from our experience as GCSE students - desperately searching for resources to help us achieve the high marks we craved. However, we often found that many resources were locked behind paywalls, or difficult to find - as they were spread across the internet. As a result of this, we made our own resources - which ended in neither of us dropping below a Grade 8 at GCSE. </p>
+        <p className="section-text">As A-Level students, many of these resources sit idly on computers - unused, and unneeded. So in response, we’ve decided to create a platform to share these. The future students of the world will experience the same thing we went through - and we’d love to make it easier for them to access items to enrich their studying. </p>
+        <p className="section-text">By joining our mission, you have the chance to positively impact thousands of students across the country. The resources you've meticulously created can find a new purpose. Additionally, you can showcase this experience as volunteering for a non-profit organization on university or job applications. You will also gain access to a network of contributors, many of whom are high achieving students. It's a meaningful way to help others while advancing your own goals.</p>
+        <p className="section-text">So, get involved today - and change the academic landscape for students just like you!</p>
+        <h3 className="aboutusBold section-text">- Josh & Abdul</h3>
       </section>
 
-      <section className="section">
+      <section className="section featured-resources">
         <h2 className="section-title subject-title">Featured Resources</h2>
 
-        {/* <div className="subj-card-container">
-          <HomepageCard color="subject-card bio-grad" subject="Biology" buttonLink="/subjects" resources="534" />
-          <HomepageCard color="subject-card chem-grad" subject="Chemistry" buttonLink="/subjects"  resources="283" />
-          <HomepageCard color="subject-card phys-grad" subject="Physics" buttonLink="/subjects"  resources="125" />
-          <HomepageCard color="subject-card maths-grad" subject="Maths" buttonLink="/subjects"  resources="56" />
-        </div> */}
+        <SubjectCards query="" limit={3} />
+
+       
         
         <Link href="/subjects" className="longBtn">
             Access All Subjects Now!
             </Link>
         </section>
 
-        <section className="section">
+        <section className=" featured-opportunities">
           <h2 className="section-title subject-title">Featured Opportunities</h2>
+          <h3 className="comingSoon">Coming Soon!</h3>
           <br></br>
-          <h1 className="comingSoon">Coming Soon!</h1>
+          <p className="csText">We are currently working on a new section of the website to provide students with opportunities to further their education. This will include work experience, summer schools, and other programs that can help students achieve their goals.</p>
           {/* <ResourcesCard resourceTitle="McLaren Work Experience" date="3rd May 2025"/>
           <ResourcesCard resourceTitle="Cambridge Summer School" date="5th October 2025"/>
           <ResourcesCard resourceTitle="Imperial Work Experience" date="22nd April 2025"/>
@@ -73,9 +71,9 @@ export default function Home() {
             </Link> */}
         </section>
 
-        <section className="section subSec">
+        <section className="section subSec submit-resources">
         <h2 className="section-title subject-title">Submit a Resource</h2>
-        <p>Do you have unused flashcards lying about, or know of a program you think will benefit the GCSE Log community? Submit it to be added to the collection! </p>
+        <p className="section-text">Do you have unused flashcards lying about, or know of a program you think will benefit the GCSE Log community? Submit it to be added to the collection! </p>
         <br></br>
         <Link href="https://forms.gle/VMnnSfxGhduHmJaB9" className="purpBtn subResBtn">Submit a Resource</Link>
         </section>

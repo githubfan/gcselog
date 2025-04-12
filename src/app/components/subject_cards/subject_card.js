@@ -11,7 +11,7 @@ config.autoAddCss = false;
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationArrow } from "@fortawesome/free-solid-svg-icons"; // Importing FontAwesome icons
 
-const SubjectCards = ({query = ""}) => {
+const SubjectCards = ({ query = "", limit = null}) => {
   const [resources, setResources] = useState([]);
   const [userId, setUserId] = useState(null);
   const [allResources, setAllResources] = useState([]); // Store all resources
@@ -43,13 +43,13 @@ const SubjectCards = ({query = ""}) => {
   // Filter resources on search query change
   useEffect(() => {
     const debounce = setTimeout(() => {
-      
-        const normalizedQuery = query.trim().toLowerCase();
 
-    if (normalizedQuery.length === 0) {
-      setResources(allResources);
-    } else {
-      const terms = normalizedQuery.split(/\s+/);
+      const normalizedQuery = query.trim().toLowerCase();
+
+      if (normalizedQuery.length === 0) {
+        setResources(limit ? allResources.slice(0, limit) : allResources);
+      } else {
+        const terms = normalizedQuery.split(/\s+/);
         // Filter resources based on the query
         const filtered = allResources.filter((resource) => {
           const combined = `
@@ -61,8 +61,9 @@ const SubjectCards = ({query = ""}) => {
         ${resource.description}
       `.toLowerCase();
 
-      return terms.every(term => combined.includes(term));
+          return terms.every(term => combined.includes(term));
         });
+        
         setResources(filtered);
       }
     }, 300); // debounce user input
@@ -95,11 +96,11 @@ const SubjectCards = ({query = ""}) => {
     <div className="subjectCardContainer">
       <div className="cards-container">
 
-      {loading ? (
-  <p className="loading">Loading resources...</p>
-) : resources.length === 0 ? (
-  <p className="loading">No resources found.</p>
-) : (
+        {loading ? (
+          <p className="loading">Loading resources...</p>
+        ) : resources.length === 0 ? (
+          <p className="loading">No resources found.</p>
+        ) : (
 
 
           resources.map((resource, index) => ( // make a placeholder for when the resource is loading
