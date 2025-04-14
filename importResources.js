@@ -10,13 +10,13 @@ async function importResources() {
 
   for (const item of data) {
     const existing = await prisma.resource.findUnique({
-      where: { resourceId: item["Resource ID"] },
+      where: { resourceId: String(item["Resource ID"]) },
     });
 
     if (existing) {
       // Update all fields except averageRating
       await prisma.resource.update({
-        where: { resourceId: item["Resource ID"] },
+        where: { resourceId: String(item["Resource ID"]) },
         data: {
           type: item["Resource Type"],
           title: item["Resource Title"],
@@ -33,7 +33,7 @@ async function importResources() {
     } else {
       await prisma.resource.create({
         data: {
-          resourceId: item["Resource ID"],
+          resourceId: String(item["Resource ID"]),
           type: item["Resource Type"],
           title: item["Resource Title"],
           level: item["Study Level"],
