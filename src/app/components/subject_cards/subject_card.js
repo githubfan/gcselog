@@ -11,17 +11,18 @@ config.autoAddCss = false;
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationArrow } from "@fortawesome/free-solid-svg-icons"; // Importing FontAwesome icons
 
+// This component is responsible for displaying the subject cards on the subjects page. It fetches the data from the server and displays it in a card format. It also handles the search functionality and the rating system.
+// The component uses the useEffect hook to fetch the data from the server and the useState hook to manage the state of the component. It also uses the uuidv4 function to generate unique IDs for each user. 
 const SubjectCards = ({ query = "", limit = null}) => {
   const [resources, setResources] = useState([]);
   const [userId, setUserId] = useState(null);
   const [allResources, setAllResources] = useState([]); // Store all resources
   const [loading, setLoading] = useState(false);
 
-
   useEffect(() => {
     let storedId = localStorage.getItem("userId");
     if (!storedId) {
-      storedId = uuidv4(); // generate new ID
+      storedId = uuidv4(); // generate new ID if 
       localStorage.setItem("userId", storedId);
     }
     setUserId(storedId);
@@ -30,7 +31,7 @@ const SubjectCards = ({ query = "", limit = null}) => {
   useEffect(() => {
     const fetchResources = async () => {
       setLoading(true);
-      const res = await fetch(`/api/resources`); // Replace with the actual endpoint to get all resources
+      const res = await fetch(`/api/resources`); // Fetch all resources from the server
       const data = await res.json();
       setAllResources(data);
       setResources(data); // Initially show all resources
@@ -49,7 +50,7 @@ const SubjectCards = ({ query = "", limit = null}) => {
       if (normalizedQuery.length === 0) {
         setResources(limit ? allResources.slice(0, limit) : allResources);
       } else {
-        const terms = normalizedQuery.split(/\s+/);
+        const terms = normalizedQuery.split(/\s+/); // Excludes spaces
         // Filter resources based on the query
         const filtered = allResources.filter((resource) => {
           const combined = `
@@ -61,7 +62,7 @@ const SubjectCards = ({ query = "", limit = null}) => {
         ${resource.description}
       `.toLowerCase();
 
-          return terms.every(term => combined.includes(term));
+          return terms.every(term => combined.includes(term)); // Allows for searching across all terms
         });
         
         setResources(filtered);
@@ -79,7 +80,7 @@ const SubjectCards = ({ query = "", limit = null}) => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ resourceId, userId, value }),
-    });
+    }); // Sending the rating to the server
 
     const result = await response.json();
     if (!response.ok) {
@@ -103,7 +104,7 @@ const SubjectCards = ({ query = "", limit = null}) => {
         ) : (
 
 
-          resources.map((resource, index) => ( // make a placeholder for when the resource is loading
+          resources.map((resource, index) => ( // Maps resources into the structure needed
 
             <div key={index} className="card">
               <p className="resourceType">{resource.type}</p>
@@ -168,6 +169,7 @@ const SubjectCards = ({ query = "", limit = null}) => {
       </div>
 
     </div>
+    
   );
 };
 

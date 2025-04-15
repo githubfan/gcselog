@@ -2,6 +2,8 @@ import Link from "next/link";
 import "./resources-styling.css"
 import Image from "next/image";
 
+// This code needs to be updated, running similarly to the subjects page. Currently it is hardcoded.
+
 function ResourcesCard(props) {
     return (
         <div className="resources-card">

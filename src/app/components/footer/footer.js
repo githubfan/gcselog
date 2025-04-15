@@ -1,5 +1,7 @@
 import "./footer-styling.css"
 
+
+// Add Linkedin, Instagram & Tiktok Icons
 const Footer = () => {
     return (
         <footer className="homepage-footer">

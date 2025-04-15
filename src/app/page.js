@@ -1,19 +1,23 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+
+// Importing the global CSS file
 import styles from "./globals.css";
+
+// Import all the components we need
 import Navbar from "./components/navigation/navbar"
 import Footer from "./components/footer/footer";
 import SubjectCards from "./components/subject_cards/subject_card";
-import HomepageCard from "./components/cards/homepage-card";
+
+// Not used atm, will be implemented when resources are up and running 
 import ResourcesCard from "./components/cards/resources-card";
 import {useEffect, useState} from "react";
-// import font awesome linkedin icon
 
+// import font awesome linkedin icon
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons"; // Importing FontAwesome icons
 
@@ -47,11 +51,8 @@ export default function Home() {
 
       <section className="section featured-resources">
         <h2 className="section-title subject-title">Featured Resources</h2>
-
-        <SubjectCards query="" limit={3} />
-
-       
         
+        <SubjectCards query="" limit={3} />  
         <Link href="/subjects" className="longBtn">
             Access All Subjects Now!
             </Link>

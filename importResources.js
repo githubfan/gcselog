@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { PrismaClient } from '@prisma/client';
-
+// Upload Resources to the Database, and update current ones
 const prisma = new PrismaClient();
 
 async function importResources() {

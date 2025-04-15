@@ -3,8 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import Navbar from "../components/navigation/navbar"
 import Footer from "../components/footer/footer";
-import HomepageCard from "../components/cards/homepage-card";
-import ResourcesCard from "../components/cards/resources-card";
 import styles from "../globals.css"
 import SubjectCards from "../components/subject_cards/subject_card";
 import {useEffect, useState} from "react";
