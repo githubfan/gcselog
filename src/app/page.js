@@ -39,6 +39,15 @@ export default function Home() {
         </div>
       </header>
 
+      <section className="section featured-resources">
+        <h2 className="section-title subject-title">Featured Resources</h2>
+        
+        <SubjectCards query="" limit={3} />  
+        <Link href="/subjects" className="longBtn">
+            Access All Subjects Now!
+            </Link>
+        </section>
+
       <section className="section about-us">
         <h2 className="section-title" id="about-us">So, what is GCSE Log?</h2>
         <p className="section-text">GCSE Log is a project maintained by <Link href="https://www.linkedin.com/in/abdul-rehman-a4b927237" target="_blank" rel="noopener noreferrer" className="linkedinLink">Abdul Rehman <FontAwesomeIcon icon={faLink} /> </Link> and <Link href="https://www.linkedin.com/in/joshuakalu/" target="_blank" rel="noopener noreferrer" className="linkedinLink">Josh Kalu <FontAwesomeIcon icon={faLink} /> </Link>.</p>
@@ -49,14 +58,7 @@ export default function Home() {
         <h3 className="aboutusBold section-text">- Josh & Abdul</h3>
       </section>
 
-      <section className="section featured-resources">
-        <h2 className="section-title subject-title">Featured Resources</h2>
-        
-        <SubjectCards query="" limit={3} />  
-        <Link href="/subjects" className="longBtn">
-            Access All Subjects Now!
-            </Link>
-        </section>
+    
 
         <section className=" featured-opportunities">
           <h2 className="section-title subject-title">Featured Opportunities</h2>
