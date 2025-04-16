@@ -66,6 +66,7 @@ body {
   .header-desc {
     padding: 0.5em;
   }
+
 }
 
 /* Section Settings */
@@ -77,19 +78,14 @@ body {
 }
 .section-text {
   padding: 1em 0em;
-  padding-right: 5em;
+  padding-right: 5%;
   font-family: 'Inter', sans-serif;
   font-size: 18px;
   line-height: 50px;
   font-weight: 500;
 }
 
-.about-us ul li, .featured-resources ul li, .featured-opportunities ul li, .submit-resources ul li {
-  padding: 1em 0em;
-  font-weight: 500;
-  line-height: 20px;
-  list-style-position: inside;
-}
+
 
 .featured-resources {
   padding: 2em 0em;
@@ -190,8 +186,7 @@ body {
 }
 
 .subSec > p {
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-right: 0;
   text-align: center;
 }
 
@@ -203,7 +198,7 @@ body {
 } 
 
 .csText {
-  padding: 1em 5em;
+  padding: 1em 5%;
   font-family: 'Inter', sans-serif;
   font-size: 18px;
   line-height: 50px;
