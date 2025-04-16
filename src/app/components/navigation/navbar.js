@@ -14,7 +14,7 @@ const Navbar = () => {
     return (
         <nav className="navigation"> 
         <Link href="/" className="logo-link" onClick={() => setMenuOpen(false)}>
-            <img className="logo" src="GCSE Log Logo.png" alt="GCSE Log Logo" />
+            <img className="logo" src="GCSE Log Logo.svg" alt="GCSE Log Logo" />
             </Link>
             <div className={`menu-items ${menuOpen ? "active" : ""}`}>
                 <Link className="link" href="/subjects" onClick={() => setMenuOpen(false)}>

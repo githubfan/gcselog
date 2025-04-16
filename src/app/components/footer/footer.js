@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <footer className="homepage-footer">
         <div className="img-container">
-        <img className="logo" src="GCSE Log Logo.png" alt="GCSE Log Logo" />
+        <img className="logo" src="GCSE Log Logo.svg" alt="GCSE Log Logo" />
         </div>
         <div className="socials">
             <Link href="https://www.linkedin.com/company/gcse-log/" target="_blank" rel="noopener noreferrer">  
