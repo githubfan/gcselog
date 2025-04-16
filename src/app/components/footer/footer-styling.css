@@ -3,16 +3,39 @@
 .homepage-footer {
     display: flex;
     justify-content: space-between;
-    padding: 1em 3em;
+    align-items: center;
+    padding: 1em;
     border-top: #000 solid;
     font-family: 'Instrument Sans', sans-serif;
     font-weight: 700;
+    gap: 10%;
     font-size: larger;
   }
+
+  .homepage-footer .img-container, .homepage-footer .socials, .homepage-footer p {
+    width: 30%;
+  }
   
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon {
+  color: #266F77;
+
+}
+
+.social-icon:hover { 
+  color: #BDB486;
+  transition: 0.5 ease;
+
+}
+
   /* Responsive Footer */
-  @media (max-width: 1055px) {
-    footer {
+  @media (max-width: 1200px) {
+    .homepage-footer {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -20,5 +43,11 @@
       gap: 30px;
       text-align: center;
     }
+
+    .homepage-footer .img-container, .homepage-footer .socials, .homepage-footer p {
+      width: auto;
+    }
+
+  
   
   }
