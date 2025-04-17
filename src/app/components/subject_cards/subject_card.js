@@ -21,14 +21,15 @@ const SubjectCards = ({ query = "", limit = null }) => {
     const [allResources, setAllResources] = useState([]); // Store all resources
     const [loading, setLoading] = useState(false);
 
-    useEffect(() => {
+    /*     useEffect(() => {
         let storedId = localStorage.getItem("userId");
         if (!storedId) {
             storedId = uuidv4(); // generate new ID if
             localStorage.setItem("userId", storedId);
         }
         setUserId(storedId);
-    }, []);
+    }, []); */
+    // Removed this, as we now do it in middleware.
 
     useEffect(() => {
         const fetchResources = async () => {
@@ -77,12 +78,10 @@ const SubjectCards = ({ query = "", limit = null }) => {
 
     // Ratings Logic
     async function rateResource(resourceId, value) {
-        const userId = localStorage.getItem("userId");
-
         const response = await fetch("/api/rate", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ resourceId, userId, value }),
+            body: JSON.stringify({ resourceId, value }),
         }); // Sending the rating to the server
 
         const result = await response.json();
