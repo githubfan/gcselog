@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1em;
-    border-top: #000 solid;
+    border-top: #777575 solid;
     font-family: 'Instrument Sans', sans-serif;
     font-weight: 700;
     gap: 10%;
@@ -24,6 +24,8 @@
 
 .social-icon {
   color: #266F77;
+  font-size: 1.98rem;
+  padding: 0 10px;
 
 }
 
