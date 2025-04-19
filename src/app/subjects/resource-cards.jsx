@@ -110,7 +110,7 @@ export default function ResourceCards({ resources }) {
                         <p className="resourceDescription mt-4 text-gray-700">
                             {resource.description}
                         </p>
-                        <div className="linkAuthorContainer mt-4 flex justify-between items-center">
+                        <div className="linkAuthorContainer mt-4 flex flex-col gap-2">
                             <Link
                                 href={resource.link}
                                 target="_blank"
