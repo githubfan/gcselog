@@ -27,7 +27,7 @@ export default function Home() {
         <div className="main-div">
             <Navbar />
             <header className="homepage-header">
-                <h1 className="header-title">
+                <h1 className="header-title text-2xl">
                     Built by <span className="turqText">Students</span>, for{" "}
                     <span className="purpText">Students</span>
                 </h1>
