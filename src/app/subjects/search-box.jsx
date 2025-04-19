@@ -24,11 +24,11 @@ export default function SearchBox({ defaultValue = "" }) {
 
     return (
         <div className="w-full bg-[#266F77] flex gap-4 items-center px-[1rem] rounded-lg">
-            <SearchIcon className="h-10 w-10 text-[#FFFBEF] " />
+            <SearchIcon className="w-5 h-5 md:h-10 mdw-10 text-[#FFFBEF] " />
             <input
                 type="text"
                 placeholder="Search for resources..."
-                className={`py-[2rem] w-full bg-transparent text-[#FFFBEF] placeholder:text-[#FFFBEF]  font-medium text-2xl outline-none`}
+                className={`py-[2rem] w-full bg-transparent text-[#FFFBEF] placeholder:text-[#FFFBEF]  font-medium text-xl md:text-2xl outline-none`}
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
             />
