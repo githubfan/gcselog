@@ -10,13 +10,13 @@ import "../components/subject_cards/subject_card";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 export default function ResourceCards({ resources }) {
-    const router = useRouter()
-    const searchParams = useSearchParams()
-    const query = searchParams.get('query')
+    const router = useRouter();
+    const searchParams = useSearchParams();
+    const query = searchParams.get("query");
     const pathname = usePathname();
-    const subjectValue = searchParams.get('subject')
-    const examBoardValue = searchParams.get('examBoard')
-    const resourceTypeValue = searchParams.get('type')
+    const subjectValue = searchParams.get("subject");
+    const examBoardValue = searchParams.get("examBoard");
+    const resourceTypeValue = searchParams.get("type");
 
     // Ratings Logic
     async function rateResource(resourceId, value) {
@@ -50,25 +50,25 @@ export default function ResourceCards({ resources }) {
 
     const setSubjectTag = (t) => {
         const queryObj = {};
-    
+
         if (t) queryObj.subject = t;
         if (examBoardValue) queryObj.examBoard = examBoardValue;
         if (resourceTypeValue) queryObj.type = resourceTypeValue;
         if (query) queryObj.query = query;
-      
-        routeUser(queryObj)
+
+        routeUser(queryObj);
     };
 
     const setExamBoardTag = (t) => {
         const queryObj = {};
-    
+
         if (subjectValue) queryObj.subject = subjectValue;
         if (t) queryObj.examBoard = t;
         if (resourceTypeValue) queryObj.type = resourceTypeValue;
         if (query) queryObj.query = query;
-      
-        routeUser(queryObj)
-    }
+
+        routeUser(queryObj);
+    };
 
     const routeUser = (queryObj) => {
         // Routes a user to new search parameters
@@ -76,10 +76,8 @@ export default function ResourceCards({ resources }) {
         // Build the query string
         const searchParams = new URLSearchParams(queryObj).toString();
 
-
         router.push(searchParams ? `${pathname}?${searchParams}` : pathname);
-
-    }
+    };
 
     return (
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -88,7 +86,7 @@ export default function ResourceCards({ resources }) {
                     No resources found.
                 </p>
             ) : (
-                resources?.map && 
+                resources?.map &&
                 resources.map((resource, index) => (
                     <div
                         key={index}
@@ -100,10 +98,18 @@ export default function ResourceCards({ resources }) {
                             <p className="tag studyLevel bg-gray-200 px-2 py-1 rounded-md text-sm">
                                 {resource.level}
                             </p>
-                            <p className="tag subject bg-gray-200 px-2 py-1 rounded-md text-sm cursor-pointer" onClick={() => setSubjectTag(resource.subject)}>
+                            <p
+                                className="tag subject bg-gray-200 px-2 py-1 rounded-md text-sm cursor-pointer"
+                                onClick={() => setSubjectTag(resource.subject)}
+                            >
                                 {resource.subject}
                             </p>
-                            <p className="tag examBoard bg-gray-200 px-2 py-1 rounded-md text-sm cursor-pointer" onClick={() => setExamBoardTag(resource.examBoard)}>
+                            <p
+                                className="tag examBoard bg-gray-200 px-2 py-1 rounded-md text-sm cursor-pointer"
+                                onClick={() =>
+                                    setExamBoardTag(resource.examBoard)
+                                }
+                            >
                                 {resource.examBoard}
                             </p>
                         </div>
@@ -156,7 +162,6 @@ export default function ResourceCards({ resources }) {
                                         title="5 stars"
                                         // Removed Tailwind classes that interfered with star display
                                     ></label>
-
                                     <input
                                         type="radio"
                                         id={`star4half-${index}`}
@@ -176,7 +181,6 @@ export default function ResourceCards({ resources }) {
                                         title="4.5 stars"
                                         // Removed Tailwind classes that interfered with star display
                                     ></label>
-
                                     <input
                                         type="radio"
                                         id={`star4-${index}`}
@@ -193,7 +197,6 @@ export default function ResourceCards({ resources }) {
                                         title="4 stars"
                                         // Removed Tailwind classes that interfered with star display
                                     ></label>
-
                                     <input
                                         type="radio"
                                         id={`star3half-${index}`}
@@ -213,7 +216,6 @@ export default function ResourceCards({ resources }) {
                                         title="3.5 stars"
                                         // Removed Tailwind classes that interfered with star display
                                     ></label>
-
                                     <input
                                         type="radio"
                                         id={`star3-${index}`}
@@ -230,7 +232,6 @@ export default function ResourceCards({ resources }) {
                                         title="3 stars"
                                         // Removed Tailwind classes that interfered with star display
                                     ></label>
-
                                     <input
                                         type="radio"
                                         id={`star2half-${index}`}
@@ -250,7 +251,6 @@ export default function ResourceCards({ resources }) {
                                         title="2.5 stars"
                                         // Removed Tailwind classes that interfered with star display
                                     ></label>
-
                                     <input
                                         type="radio"
                                         id={`star2-${index}`}
@@ -267,7 +267,6 @@ export default function ResourceCards({ resources }) {
                                         title="2 stars"
                                         // Removed Tailwind classes that interfered with star display
                                     ></label>
-
                                     <input
                                         type="radio"
                                         id={`star1half-${index}`}
@@ -287,7 +286,6 @@ export default function ResourceCards({ resources }) {
                                         title="1.5 stars"
                                         // Removed Tailwind classes that interfered with star display
                                     ></label>
-
                                     <input
                                         type="radio"
                                         id={`star1-${index}`}
@@ -304,7 +302,6 @@ export default function ResourceCards({ resources }) {
                                         title="1 star"
                                         // Removed Tailwind classes that interfered with star display
                                     ></label>
-
                                     <input
                                         type="radio"
                                         id={`starhalf-${index}`}

@@ -88,19 +88,22 @@ async function fetchResources({
     searchUrl.searchParams.append('offset', offset.toString());
     sort && searchUrl.searchParams.append('sort', sort);
 
-
     const response = await fetch(searchUrl.toString(), {
-        method: 'GET',
-        cache: 'no-store',
+        method: "GET",
+        cache: "no-store",
     });
 
     if (!response.ok) {
         // Handle non-2xx responses from the external API
         const errorBody = await response.text();
-        console.error('Error fetching from search API:', response.status, errorBody);
-        toast.error('An error occured whilst fetching resources', {
-            position: 'top-center'
-        })
+        console.error(
+            "Error fetching from search API:",
+            response.status,
+            errorBody
+        );
+        toast.error("An error occured whilst fetching resources", {
+            position: "top-center",
+        });
     }
 
     const res = await response.json();
@@ -112,9 +115,6 @@ async function fetchResources({
         return allResources;
     }
 
-    const normalizedQuery = query.trim().toLowerCase();
-    const terms = normalizedQuery.split(/\s+/);
-
     return allResources.filter((resource) => {
         const combined = `
       ${resource.title}
@@ -124,8 +124,7 @@ async function fetchResources({
       ${resource.type}
       ${resource.description}
     `.toLowerCase();
-
-        return terms.every((term) => combined.includes(term));
+    return combined;
     });
 }
 
