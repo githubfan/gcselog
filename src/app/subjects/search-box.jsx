@@ -1,5 +1,6 @@
 "use client";
 
+import { SearchIcon } from "lucide-react";
 import { useRouter, usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
@@ -22,12 +23,15 @@ export default function SearchBox({ defaultValue = "" }) {
     }, [query, router, pathname]);
 
     return (
-        <input
-            type="text"
-            placeholder="Search for resources..."
-            className="searchBox"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-        />
+        <div className="w-full bg-[#266F77] flex gap-4 items-center px-[1rem] rounded-lg">
+            <SearchIcon className="h-10 w-10 text-[#FFFBEF] " />
+            <input
+                type="text"
+                placeholder="Search for resources..."
+                className={`py-[2rem] w-full bg-transparent text-[#FFFBEF] placeholder:text-[#FFFBEF]  font-medium text-2xl outline-none`}
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+            />
+        </div>
     );
 }

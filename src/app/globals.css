@@ -7,11 +7,6 @@
 
 /* Basic Styling */
 
-* {
-  padding: 0;
-  margin: 0;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -26,29 +21,36 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-h1 {
+/*
+  These rules now *only* apply if there are no text-size related
+  Tailwind classes on the heading element.
+  This is achieved by using the `:not` pseudo-class with
+  a list of common Tailwind text size classes.
+*/
+h1:not([class*="text-"]) {
   font-size: 3.0em;
 }
 
-h2 {
+h2:not([class*="text-"]) {
   font-size: 2.5em;
 }
 
-h3 {
+h3:not([class*="text-"]) {
   font-size: 2em;
 }
 
-h4 {
+h4:not([class*="text-"]) {
   font-size: 1.75em;
 }
 
-h5 {
+h5:not([class*="text-"]) {
   font-size: 1.5em;
 }
 
-h6 {
+h6:not([class*="text-"]) {
   font-size: 1.25em;
 }
+
 
 /* Header Styling */
 
@@ -224,7 +226,7 @@ h6 {
   font-size: 40px;
   font-weight: 700;
   font-family: 'Instrument Sans', sans-serif;
-} 
+}
 
 .csText {
   padding: 1em 5%;
@@ -243,7 +245,7 @@ a.linkedinLink {
 
 .featured-opportunities {
   text-align: center;
-  padding: 1em 0em; 
+  padding: 1em 0em;
   height: fit-content;
 }
 

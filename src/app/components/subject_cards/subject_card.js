@@ -36,8 +36,8 @@ const SubjectCards = ({ query = "", limit = null }) => {
             setLoading(true);
             const res = await fetch(`/api/resources`); // Fetch all resources from the server
             const data = await res.json();
-            setAllResources(data);
-            setResources(data); // Initially show all resources
+            setAllResources(data.hits);
+            setResources(data.hits); // Initially show all resources
             setLoading(false);
         };
 
