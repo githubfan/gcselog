@@ -1,9 +1,12 @@
 import { PrismaClient } from '@prisma/client';
+import { cookies } from "next/headers";
 
 const prisma = new PrismaClient();
 
 export async function POST(req) { // Post Request to Database
-  const { resourceId, userId, value } = await req.json(); // Extracting the resourceId, userId and value from the request body
+  const { resourceId, value } = await req.json(); // Extracting the resourceId, userId and value from the request body
+  const cookieStore = await cookies();
+  const userId = cookieStore.get("userid")?.value;
 
   if (!resourceId || !userId || value == null) {
     return new Response(JSON.stringify({ error: "Invalid input" }), { status: 400 });
