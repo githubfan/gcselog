@@ -24,16 +24,6 @@ export default async function Subjects({ searchParams }) {
 
     console.log(query);
 
-    // Fetch resources on the server
-    const resources =
-        (await fetchResources({
-            query,
-            examBoard,
-            subject,
-            type: resourceType,
-        })) ?? [];
-    const availableTags = (await fetchTags()) ?? [];
-
     return (
         <div className="min-h-screen flex flex-col">
             <Navbar />
@@ -60,24 +50,28 @@ export default async function Subjects({ searchParams }) {
                         <div className="h-12 animate-pulse bg-gray-200 rounded-md"></div>
                     }
                 >
-                    <Tags availableTags={availableTags} />
+                    <ServerTagsSuspense />
                 </Suspense>
 
                 <div className="w-full pb-8 md:pb-12">
-                    {/* Display resources with suspense for loading state */}
                     <Suspense
                         fallback={
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                 {[...Array(6)].map((_, i) => (
                                     <div
                                         key={i}
-                                        className="h-64 animate-pulse bg-gray-200 rounded-lg"
+                                        className="h-64 animate-pulse bg-white rounded-lg"
                                     ></div>
                                 ))}
                             </div>
                         }
                     >
-                        <ResourceCards resources={resources} />
+                        <ServerResourcesSuspense
+                            query={query}
+                            examBoard={examBoard}
+                            subject={subject}
+                            resourceType={resourceType}
+                        />
                     </Suspense>
                 </div>
             </div>
@@ -85,6 +79,32 @@ export default async function Subjects({ searchParams }) {
         </div>
     );
 }
+
+async function ServerResourcesSuspense({
+    query,
+    examBoard,
+    subject,
+    resourceType,
+}) {
+    const resources =
+        (await fetchResources({
+            query,
+            examBoard,
+            subject,
+            type: resourceType,
+        })) ?? [];
+
+    return <ResourceCards resources={resources} />;
+}
+
+async function ServerTagsSuspense() {
+    const availableTags = (await fetchTags()) ?? [];
+
+    return <Tags availableTags={availableTags} />;
+}
+
+
+
 
 // Server-side function to fetch resources
 async function fetchResources({
