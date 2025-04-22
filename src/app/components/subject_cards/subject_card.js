@@ -138,15 +138,44 @@ const SubjectCards = ({ query = "", limit = null }) => {
 
 export default SubjectCards;
 
-export function SubjectCard({ resource, index, rateResource, className = "" }) {
+export function SubjectCard({
+    resource,
+    index,
+    rateResource,
+    className = "",
+    setSubjectTag,
+    setExamBoardTag,
+}) {
     return (
         <div className={`${className !== "" ? className : "card"}`}>
             <p className="resourceType">{resource.type}</p>
             <h3 className="resourceTitle">{resource.title}</h3>
             <div className="tags">
                 <p className="tag studyLevel">{resource.level}</p>
-                <p className="tag subject">{resource.subject}</p>
-                <p className="tag examBoard">{resource.examBoard}</p>
+                <p
+                    className={`tag subject ${
+                        setSubjectTag ? "cursor-pointer" : ""
+                    }`}
+                    onClick={() => {
+                        if (setSubjectTag) {
+                            setSubjectTag(resource.subject);
+                        }
+                    }}
+                >
+                    {resource.subject}
+                </p>
+                <p
+                    className={`tag examBoard ${
+                        setExamBoardTag ? "cursor-pointer" : ""
+                    }`}
+                    onClick={() => {
+                        if (setExamBoardTag) {
+                            setExamBoardTag(resource.examBoard);
+                        }
+                    }}
+                >
+                    {resource.examBoard}
+                </p>
             </div>
             <p className="resourceDescription">{resource.description}</p>
             <div className="linkAuthorContainer">

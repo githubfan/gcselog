@@ -90,6 +90,8 @@ export default function ResourceCards({ resources }) {
                         key={index}
                         resource={resource}
                         rateResource={rateResource}
+                        setSubjectTag={setSubjectTag}
+                        setExamBoardTag={setExamBoardTag}
                         className="font-sans bg-white rounded-[10px] border border-black p-4 col-span-1 mb-5 min-h-[450px]"
                     />
                 ))
